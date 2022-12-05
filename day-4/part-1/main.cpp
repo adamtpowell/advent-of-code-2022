@@ -32,12 +32,10 @@ int main() {
     regex splitting_regex("(\\d+)-(\\d+),(\\d+)-(\\d+)");
     vector<int> numbers;
     for (string line; getline(cin, line);) {
-        smatch match;
-        regex_search(line, match, splitting_regex);
+        smatch matches;
+        regex_search(line, matches, splitting_regex);
 
-        vector<string> matches(begin(match) + 1, end(match));
-
-        if (only_a_little_within(stoi(matches[0]), stoi(matches[1]), stoi(matches[2]), stoi(matches[3]))) {
+        if (only_a_little_within(stoi(matches[1]), stoi(matches[2]), stoi(matches[3]), stoi(matches[4]))) {
             total_overlaps++;
         }
     }
