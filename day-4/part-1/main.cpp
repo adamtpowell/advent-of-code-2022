@@ -29,7 +29,7 @@ bool only_a_little_within(int range1_start, int range1_end, int range2_start, in
 int main() {
     int total_overlaps = 0;
 
-                           regex splitting_regex("(\\d+)-(\\d+),(\\d+)-(\\d+)");
+    regex splitting_regex("(\\d+)-(\\d+),(\\d+)-(\\d+)");
     vector<int> numbers;
     for (string line; getline(cin, line);) {
         smatch match;
